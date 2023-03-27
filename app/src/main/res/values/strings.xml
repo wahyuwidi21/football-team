@@ -8,5 +8,9 @@
     <string name="website_text">Website :</string>
     <string name="list_favorite_title">List</string>
     <string name="title_favorite">Favorite</string>
+    <string name="error_text_module">Error installing module</string>
+    <string name="success_text_module">Success installing module</string>
+    <string name="open_text_module">Open module</string>
+    <string name="notfound_text_module">Module not found</string>
 
 </resources>

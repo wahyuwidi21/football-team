@@ -42,11 +42,13 @@ class DetailFragment : Fragment() {
         teamViewModel.getTeamDetail(args.id).observe(viewLifecycleOwner) {
 
             selectedTeam = it.data
-            binding.txtName.text = it.data?.name
-            binding.txtWebsiteVal.text = it.data?.website
-            binding.txtFounded.text = it.data?.founded.toString()
-            binding.txtAddress.text = it.data?.address
-            binding.txtCountry.text = it.data?.area?.name
+            binding.apply {
+                txtName.text = it.data?.name
+                txtWebsiteVal.text = it.data?.website
+                txtFounded.text = it.data?.founded.toString()
+                txtAddress.text = it.data?.address
+                txtCountry.text = it.data?.area?.name
+            }
             setFavouriteStatus(if (it.data?.isFavorite == null) false else it.data!!.isFavorite!!)
             if (it.data?.crest?.takeLast(3) != "svg") Glide.with(requireContext())
                 .load(it.data?.crest)

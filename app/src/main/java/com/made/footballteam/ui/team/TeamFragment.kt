@@ -56,7 +56,7 @@ class TeamFragment : Fragment() {
             try {
                 installFavoriteModule()
             } catch (e: Exception) {
-                Toast.makeText(requireContext(), "Module not found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.notfound_text_module), Toast.LENGTH_SHORT).show()
             }
         }
         teamViewModel.footballTeam.observe(viewLifecycleOwner) {
@@ -69,7 +69,7 @@ class TeamFragment : Fragment() {
         val moduleFavorite = "favorite"
         if (splitInstallManager.installedModules.contains(moduleFavorite)) {
             moveToFavorite()
-            Toast.makeText(requireContext(), "Open module", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.open_text_module), Toast.LENGTH_SHORT).show()
         } else {
             val request = SplitInstallRequest.newBuilder()
                 .addModule(moduleFavorite)
@@ -78,13 +78,13 @@ class TeamFragment : Fragment() {
                 .addOnSuccessListener {
                     Toast.makeText(
                         requireContext(),
-                        "Success installing module",
+                        getString(R.string.success_text_module),
                         Toast.LENGTH_SHORT
                     ).show()
                     moveToFavorite()
                 }
                 .addOnFailureListener {
-                    Toast.makeText(requireContext(), "Error installing module", Toast.LENGTH_SHORT)
+                    Toast.makeText(requireContext(), getString(R.string.error_text_module), Toast.LENGTH_SHORT)
                         .show()
                 }
         }
