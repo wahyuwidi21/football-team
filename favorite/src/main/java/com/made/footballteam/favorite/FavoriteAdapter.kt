@@ -10,8 +10,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.made.footballteam.core.domain.model.FootballTeam
 import com.made.footballteam.databinding.ItemTeamBinding
 
-
-class FavoriteAdapter() :
+@Suppress("unused")
+class FavoriteAdapter :
     RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
     private var items: List<FootballTeam>? = null
 
@@ -29,6 +29,7 @@ class FavoriteAdapter() :
         notifyItemInserted(0)
     }
 
+    @Suppress("unused")
     class ViewHolder(private val binding: ItemTeamBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(data: FootballTeam?) {

@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import javax.inject.Singleton
 
+@Suppress("unused")
 @Singleton
 class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
 

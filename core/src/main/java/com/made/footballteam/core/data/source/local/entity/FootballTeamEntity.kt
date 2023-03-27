@@ -1,15 +1,13 @@
 package com.made.footballteam.core.data.source.local.entity
 
-import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.google.gson.annotations.SerializedName
 
+@Suppress("unused")
 @Entity(tableName = "football_team")
 data class FootballTeamEntity(
     @PrimaryKey
-    @NonNull
     @ColumnInfo(name = "football_team_id")
     val id: Int,
 

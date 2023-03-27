@@ -2,6 +2,7 @@ package com.made.footballteam.core.data.source.remote.response
 
 import com.google.gson.annotations.SerializedName
 
+@Suppress("unused")
 data class FootballTeamResponse(
 
 	@field:SerializedName("teams")
@@ -14,6 +15,7 @@ data class FootballTeamResponse(
 	val filters: Filters
 )
 
+@Suppress("unused")
 data class Filters(
 
 	@field:SerializedName("offset")
@@ -26,6 +28,7 @@ data class Filters(
 	val permission: String
 )
 
+@Suppress("unused")
 data class TeamsItem(
 
 	@field:SerializedName("venue")

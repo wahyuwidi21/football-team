@@ -18,6 +18,7 @@ import com.made.footballteam.core.domain.model.FootballTeamDetail
 import com.made.footballteam.databinding.FragmentDetailTeamBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("unused")
 @AndroidEntryPoint
 class DetailFragment : Fragment() {
 
@@ -31,7 +32,7 @@ class DetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDetailTeamBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -67,7 +68,6 @@ class DetailFragment : Fragment() {
             mainNavController.navigateUp()
         }
     }
-
 
     private fun setFavouriteStatus(status: Boolean) {
         val drawable = if (status) {

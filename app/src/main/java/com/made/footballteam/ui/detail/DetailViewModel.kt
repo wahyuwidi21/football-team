@@ -1,10 +1,10 @@
 package com.made.footballteam.ui.detail
 
-import androidx.lifecycle.*
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import com.made.footballteam.core.domain.model.FootballTeamDetail
 import com.made.footballteam.core.domain.usecase.FootballTeamUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.*
 import javax.inject.Inject
 
 @HiltViewModel

@@ -8,10 +8,9 @@ import coil.load
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.made.footballteam.core.domain.model.FootballTeam
-//import com.made.footballteam.core.domain.model.FootballTeam
 import com.made.footballteam.databinding.ItemTeamBinding
 
-
+@Suppress("unused")
 class TeamAdapter(private val onItemClicked: (userName: Int) -> Unit?) :
     RecyclerView.Adapter<TeamAdapter.ViewHolder>() {
     private var items: List<FootballTeam>? = null
@@ -32,7 +31,7 @@ class TeamAdapter(private val onItemClicked: (userName: Int) -> Unit?) :
         this.items = items
         notifyItemInserted(0)
     }
-
+    @Suppress("unused")
     class ViewHolder(private val binding: ItemTeamBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(data: FootballTeam?) {

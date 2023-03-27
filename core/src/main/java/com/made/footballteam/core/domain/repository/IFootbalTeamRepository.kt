@@ -11,6 +11,7 @@ interface IFootbalTeamRepository {
 
     fun getTeamDetail(id:Int):Flow<Resource<FootballTeamDetail?>>
 
+    @Suppress("unused")
     fun setFavoriteTeam(team: FootballTeamDetail, state: Boolean)
 
     fun getFavoriteTeam(id:Int):Flow<Boolean>

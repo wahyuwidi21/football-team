@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FootballTeam"
         android:usesCleartextTraffic="true"
+        tools:remove="android:appComponentFactory"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"

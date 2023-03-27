@@ -30,7 +30,7 @@ class TeamFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentTeamBinding.inflate(layoutInflater)
         teamAdapter = TeamAdapter {
             val bundle =
