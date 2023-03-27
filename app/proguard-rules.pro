@@ -19,3 +19,23 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+##---------------Begin: proguard configuration for Glide ----------
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep class * extends com.bumptech.glide.module.AppGlideModule {
+<init>(...);
+}
+-keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
+**[] $VALUES;
+public *;
+}
+-keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {
+*** rewind();
+}
+
+-keep class androidx.viewbinding.ViewBinding
+-keep class kotlin.collections.CollectionsKt
+-keep class kotlin.LazyKt
+-keepnames @dagger.hilt.android.lifecycle.HiltViewModel class * extends androidx.lifecycle.ViewModel
+-keep class dagger.MembersInjector
+-keep class kotlin.text.StringsKt

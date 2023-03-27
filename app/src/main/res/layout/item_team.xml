@@ -22,6 +22,6 @@
         app:layout_constraintTop_toTopOf="@id/img_team_logo"
         app:layout_constraintStart_toEndOf="@id/img_team_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Arsendal"/>
+        tools:text="Arsenal"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

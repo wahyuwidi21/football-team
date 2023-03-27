@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.made.footballteam.core.data.source.remote.response
 
 import com.google.gson.annotations.SerializedName
@@ -52,7 +54,7 @@ data class FootballTeamDetailResponse(
 	@field:SerializedName("crest")
 	val crest: String? = null
 )
-
+@Suppress("unused")
 data class RunningCompetitionsItem(
 
 	@field:SerializedName("code")
@@ -71,6 +73,7 @@ data class RunningCompetitionsItem(
 	val emblem: String? = null
 )
 
+@Suppress("unused")
 data class Area(
 
 	@field:SerializedName("code")
@@ -85,7 +88,7 @@ data class Area(
 	@field:SerializedName("id")
 	val id: Int? = null
 )
-
+@Suppress("unused")
 data class Contract(
 
 	@field:SerializedName("start")
@@ -94,7 +97,7 @@ data class Contract(
 	@field:SerializedName("until")
 	val until: String? = null
 )
-
+@Suppress("unused")
 data class SquadItem(
 
 	@field:SerializedName("firstName")
@@ -128,6 +131,7 @@ data class SquadItem(
 	val position: String? = null
 )
 
+@Suppress("unused")
 data class Coach(
 
 	@field:SerializedName("firstName")

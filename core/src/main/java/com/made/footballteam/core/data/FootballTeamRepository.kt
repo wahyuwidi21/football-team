@@ -25,6 +25,10 @@ class FootballTeamRepository @Inject constructor(
 
     override fun getAllTeam(): Flow<Resource<List<FootballTeam>>> =
         object : NetworkBoundResource<List<FootballTeam>, FootballTeamResponse>() {
+            override fun onFetchFailed() {
+                loadFromDB()
+            }
+
             override fun loadFromDB(): Flow<List<FootballTeam>> {
                 return localDataSource.getAllTeam().map {
                     FootballTeamDataMapper.mapEntitiesToDomain(it)
@@ -45,6 +49,10 @@ class FootballTeamRepository @Inject constructor(
 
     override fun getTeamDetail(id:Int): Flow<Resource<FootballTeamDetail?>> =
         object : NetworkBoundResource<FootballTeamDetail?, FootballTeamDetailResponse>() {
+            override fun onFetchFailed() {
+                loadFromDB()
+            }
+
             override fun loadFromDB(): Flow<FootballTeamDetail?> {
                 return localDataSource.getTeamDetail(id).map {
                     FootballTeamDetailDataMapper.mapEntityToDomain(it)

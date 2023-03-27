@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">Football Team</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_footballteam">Favorite</string>
+    <string name="back_button_desc">back button</string>
+    <string name="favorite_button_desc">favorite_button</string>
+    <string name="crest_logo_desc">crest logo</string>
+    <string name="toolbar_text">Football Team</string>
+    <string name="website_text">Website :</string>
+    <string name="list_favorite_title">List</string>
     <string name="title_favorite">Favorite</string>
+
 </resources>

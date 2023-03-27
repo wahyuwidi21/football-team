@@ -4,6 +4,7 @@ import com.made.footballteam.core.data.source.local.entity.FootballTeamEntity
 import com.made.footballteam.core.data.source.remote.response.FootballTeamResponse
 import com.made.footballteam.core.domain.model.FootballTeam
 
+@Suppress("unused")
 object FootballTeamDataMapper {
     fun mapResponsesToEntities(input: FootballTeamResponse): List<FootballTeamEntity> {
         val teamList = ArrayList<FootballTeamEntity>()

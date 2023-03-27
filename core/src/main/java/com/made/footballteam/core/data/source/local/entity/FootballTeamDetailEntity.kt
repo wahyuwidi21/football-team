@@ -1,6 +1,5 @@
 package com.made.footballteam.core.data.source.local.entity
 
-import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -8,7 +7,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "football_team_detail")
 data class FootballTeamDetailEntity(
     @PrimaryKey
-    @NonNull
     @ColumnInfo(name = "football_team_id")
     val id: Int,
 
