@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_team">
+
+    <fragment
+        android:id="@+id/fragment_team"
+        android:name="com.made.footballteam.ui.team.TeamFragment"
+        tools:layout="@layout/fragment_team">
+
+        <action
+            android:id="@+id/action_fragment_team_to_fragment_detail_team"
+            app:destination="@id/fragment_detail_team" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_detail_team"
+        android:name="com.made.footballteam.ui.detail.DetailFragment"
+        tools:layout="@layout/fragment_detail_team">
+
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
+
